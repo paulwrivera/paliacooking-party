@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <!-- xs:bg-[url('/img/host-card-bg-m.png')] on party create page | xs:bg-none on party sign up page -->
+  <body class="bg-cc-dark-100 h-screen flex flex-col justify-between xs:bg-none xs:bg-cover sm:bg-none">
+    <!-- Sets the left & right padding -->
+    <div id="header-wrapper" class="container px-4 lg:px-32 xl:px-16 mx-auto">
+      <div
+        id="header"
+        class="text-center flex flex-col gap-3 py-4 w-full lg:flex-row lg:text-left lg:justify-between"
+      >
+        <h1 class="text-4xl text-cc-gold-100 lg:w-fit">Cooking Party</h1>
+        <div
+          id="bug-link-wrapper"
+        >
+          <a href="https://discord.gg/cr5jVxhUm" class="flex flex-row gap-1 items-center justify-center w-full lg:w-fit text-cc-pale hover:text-cc-gold-100"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-lg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082"
+              />
+            </svg>
+            <p class="text-lg">help / report a bug</p></a
+          >
+        </div>
+        </div>
+      </div>
+      <!-- lg:py-14 on party sign up page | remove the value on party create page -->
+      <div id="card-wrapper" class="container px-4 lg:px-32 xl:px-16 mx-auto lg:py-14">
+      <div id="card-container" class="h-full flex flex-col gap-8">
+        <!-- Party host card | hidden on party sign up page | flex on party create page -->
+        <div
+          id="party-host-container"
+          class="hidden flex-col gap-8 p-8 lg:py-24 bg-cc-dark-200 rounded-xl border-solid border-cc-brown-100 border-2 md:border-4 text-center shadow-lg xl:bg-[url('/img/host-card-bg.png')] xl:bg-cover "
+        >
+          <div id="party-host-text" class="flex flex-col gap-2">
+            <h3 class="text-3xl text-cc-gold-200">Party Host Name</h3>
+            <p class="text-lg font-normal text-cc-brown-300">
+              Enter your IGN below
+            </p>
+          </div>
+          <div id="party-host-input" class="flex flex-col gap-3 mx-auto w-full md:w-[33%]">
+            <input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-200 bg-cc-pale rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400" placeholder=""></input>
+            <button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 rounded-lg text-base font-semibold text-cc-dark-200 shadow-lg">Host party</button>
+          </div>
+        </div>
+       <!-- Party host card | flex on party sign up page | hidden on party create page -->
+        <div
+        id="party-host-container"
+        class="flex flex-col gap-8 p-8 lg:py-24 bg-cc-dark-200 rounded-xl border-solid border-cc-brown-100 border-2 md:border-4 text-center shadow-lg xl:bg-[url('/img/host-card-bg.png')] xl:bg-cover"
+      >
+        <div id="party-host-text" class="flex flex-col gap-2">
+          <h3 class="text-3xl text-cc-gold-200">Host: Guex Longname</h3>
+        </div>
+        <div id="party-host-input" class="flex flex-col gap-3 mx-auto w-full md:w-[33%]">
+          <button type="button" id="hostButtonInput" class="bg-cc-gold-100  hover:bg-cc-gold-200 text-center py-2 rounded-lg text-base font-semibold text-cc-dark-200 shadow-lg">Copy party link</button>
+        </div>
+      </div>
+        <!-- Participants card | hidden on party create page | flex on party sign up page -->
+        <div
+          id="participants"
+          class="flex flex-col gap-8 md:p-4 lg:p-8 md:bg-cc-dark-200 rounded-xl md:border-solid md:border-cc-brown-100 md:border-4 text-center shadow-lg"
+        >
+          <div id="party-participants-text">
+            <h3 class="text-3xl text-cc-gold-200">Participants</h3>
+          </div>
+          <div id="party-roles" class="mx-auto w-full text-left text-lg font-semibold rounded-xl overflow-hidden">
+            <table class="table-auto w-full rounded-xl">
+              <thead class="bg-cc-brown-200">
+                <tr>
+                  <th class="py-3 w-32 lg:w-[120px] xl:w-[264px]"><p class="pl-4 xl:pl-24 text-lg font-semibold text-cc-dark-200">Role (?)</p></th>
+                  <th class="py-3 hidden lg:block lg:pl-4"><p class="text-lg font-semibold text-cc-dark-200">Requirements</p></th>
+                  <th class="py-3"><p class="text-lg font-semibold text-cc-dark-200">Signup</p></th>
+                  <th class="py-3 hidden lg:block"><p class="text-lg font-semibold text-cc-dark-200">Actions</p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-400">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+                <tr class="bg-cc-dark-300">
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
+                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
+                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+    <footer
+      class="w-full bg-cc-brown-100 rounded-t-xl py-4 shadow-lg mt-4"
+    >
+      <a href="#" class="text-cc-brown-300 hover:text-cc-gold-100"
+        ><p class="text-base font-normal text-center w-full">
+          Emergency App Reset
+        </p></a
+      >
+    </footer>
+  </body>
+</html>
