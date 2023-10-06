@@ -905,7 +905,7 @@ video {
 
 @media (min-width: 360px) {
   .xs\:bg-\[url\(\'\/img\/host-card-bg-m\.png\'\)\] {
-    background-image: url('/img/host-card-bg-m.png');
+    background-image: url('../img/host-card-bg-m.png');
   }
 
   .xs\:bg-none {
@@ -1028,7 +1028,7 @@ video {
   }
 
   .xl\:bg-\[url\(\'\/img\/host-card-bg\.png\'\)\] {
-    background-image: url('/img/host-card-bg.png');
+    background-image: url('../img/host-card-bg.png');
   }
 
   .xl\:bg-cover {
