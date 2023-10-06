@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <!-- xs:bg-[url('/img/host-card-bg-m.png')] on party create page | xs:bg-none on party sign up page -->
-  <body class="bg-cc-dark-100 h-screen flex flex-col justify-between xs:bg-[url('/img/host-card-bg-m.png')] xs:bg-cover sm:bg-none">
+  <body
+    class="bg-cc-dark-100 h-screen flex flex-col justify-between xs:bg-[url('/img/host-card-bg-m.png')] xs:bg-cover sm:bg-none"
+  >
     <!-- Sets the left & right padding -->
     <div id="header-wrapper" class="container px-4 lg:px-32 xl:px-16 mx-auto">
       <div
@@ -14,10 +16,10 @@
         class="text-center flex flex-col gap-3 py-4 w-full lg:flex-row lg:text-left lg:justify-between"
       >
         <h1 class="text-4xl text-cc-gold-100 lg:w-fit">Cooking Party</h1>
-        <div
-          id="bug-link-wrapper"
-        >
-          <a href="https://discord.gg/cr5jVxhUm" class="flex flex-row gap-1 items-center justify-center w-full lg:w-fit text-cc-pale hover:text-cc-gold-100"
+        <div id="bug-link-wrapper">
+          <a
+            href="https://discord.gg/cr5jVxhUm"
+            class="flex flex-row gap-1 items-center justify-center w-full lg:w-fit text-cc-pale hover:text-cc-gold-100"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,15 +37,18 @@
             <p class="text-lg">help / report a bug</p></a
           >
         </div>
-        </div>
       </div>
-      <!-- lg:py-14 on party sign up page | lg:py-0 on party create page -->
-      <div id="card-wrapper" class="container px-4 lg:px-32 xl:px-16 mx-auto lg:py-0">
+    </div>
+    <!-- lg:py-14 on party sign up page | lg:py-0 on party create page -->
+    <div
+      id="card-wrapper"
+      class="container px-4 lg:px-32 xl:px-16 mx-auto lg:py-0"
+    >
       <div id="card-container" class="h-full flex flex-col gap-8">
         <!-- Party host card | hidden on party sign up page | flex on party create page -->
         <div
           id="party-host-container"
-          class="flex flex-col gap-8 p-8 lg:py-24 bg-cc-dark-200 rounded-xl border-solid border-cc-brown-100 border-2 md:border-4 text-center shadow-lg xl:bg-[url('/img/host-card-bg.png')] xl:bg-cover "
+          class="flex flex-col gap-8 p-8 lg:py-24 bg-cc-dark-200 rounded-xl border-solid border-cc-brown-100 border-2 md:border-4 text-center shadow-lg xl:bg-[url('/img/host-card-bg.png')] xl:bg-cover"
         >
           <div id="party-host-text" class="flex flex-col gap-2">
             <h3 class="text-3xl text-cc-gold-200">Party Host Name</h3>
@@ -51,23 +56,46 @@
               Enter your IGN below
             </p>
           </div>
-          <div id="party-host-input" class="flex flex-col gap-3 mx-auto w-full md:w-[33%]">
-            <input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-200 bg-cc-pale rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400" placeholder=""></input>
-            <button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 rounded-lg text-base font-semibold text-cc-dark-200 shadow-lg">Host party</button>
+          <div
+            id="party-host-input"
+            class="flex flex-col gap-3 mx-auto w-full md:w-[33%]"
+          >
+            <input
+              type="text"
+              id="hostNameInput"
+              class="border-solid border-1 border-cc-gold-200 bg-cc-pale rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400"
+              placeholder=""
+            />
+            <button
+              type="button"
+              id="hostButtonInput"
+              class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 rounded-lg text-base font-semibold text-cc-dark-200 shadow-lg"
+            >
+              Host party
+            </button>
           </div>
         </div>
-       <!-- Party host card | flex on party sign up page | hidden on party create page -->
+        <!-- Party host card | flex on party sign up page | hidden on party create page -->
         <div
-        id="party-host-container"
-        class="hidden flex-col gap-8 p-8 lg:py-24 bg-cc-dark-200 rounded-xl border-solid border-cc-brown-100 border-2 md:border-4 text-center shadow-lg xl:bg-[url('/img/host-card-bg.png')] xl:bg-cover"
-      >
-        <div id="party-host-text" class="flex flex-col gap-2">
-          <h3 class="text-3xl text-cc-gold-200">Host: Guex Longname</h3>
+          id="party-host-container"
+          class="hidden flex-col gap-8 p-8 lg:py-24 bg-cc-dark-200 rounded-xl border-solid border-cc-brown-100 border-2 md:border-4 text-center shadow-lg xl:bg-[url('/img/host-card-bg.png')] xl:bg-cover"
+        >
+          <div id="party-host-text" class="flex flex-col gap-2">
+            <h3 class="text-3xl text-cc-gold-200">Host: Username Longname</h3>
+          </div>
+          <div
+            id="party-host-input"
+            class="flex flex-col gap-3 mx-auto w-full md:w-[33%]"
+          >
+            <button
+              type="button"
+              id="hostButtonInput"
+              class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 rounded-lg text-base font-semibold text-cc-dark-200 shadow-lg"
+            >
+              Copy party link
+            </button>
+          </div>
         </div>
-        <div id="party-host-input" class="flex flex-col gap-3 mx-auto w-full md:w-[33%]">
-          <button type="button" id="hostButtonInput" class="bg-cc-gold-100  hover:bg-cc-gold-200 text-center py-2 rounded-lg text-base font-semibold text-cc-dark-200 shadow-lg">Copy party link</button>
-        </div>
-      </div>
         <!-- Participants card | hidden on party create page | flex on party sign up page -->
         <div
           id="participants"
@@ -76,116 +104,463 @@
           <div id="party-participants-text">
             <h3 class="text-3xl text-cc-gold-200">Participants</h3>
           </div>
-          <div id="party-roles" class="mx-auto w-full text-left text-lg font-semibold rounded-xl overflow-hidden">
+          <div
+            id="party-roles"
+            class="mx-auto w-full text-left text-lg font-semibold rounded-xl overflow-hidden"
+          >
             <table class="table-auto w-full rounded-xl">
               <thead class="bg-cc-brown-200">
                 <tr>
-                  <th class="py-3 w-32 lg:w-[120px] xl:w-[264px]"><p class="pl-4 xl:pl-24 text-lg font-semibold text-cc-dark-200">Role (?)</p></th>
-                  <th class="py-3 hidden lg:block lg:pl-4"><p class="text-lg font-semibold text-cc-dark-200">Requirements</p></th>
-                  <th class="py-3"><p class="text-lg font-semibold text-cc-dark-200">Signup</p></th>
-                  <th class="py-3 hidden lg:block"><p class="text-lg font-semibold text-cc-dark-200">Actions</p></th>
+                  <th class="py-3 w-32 lg:w-[120px] xl:w-[264px]">
+                    <p
+                      class="pl-4 xl:pl-24 text-lg font-semibold text-cc-dark-200"
+                    >
+                      Role (?)
+                    </p>
+                  </th>
+                  <th class="py-3 hidden lg:block lg:pl-4">
+                    <p class="text-lg font-semibold text-cc-dark-200">
+                      Requirements
+                    </p>
+                  </th>
+                  <th class="py-3">
+                    <p class="text-lg font-semibold text-cc-dark-200">Signup</p>
+                  </th>
+                  <th class="py-3 hidden lg:block">
+                    <p class="text-lg font-semibold text-cc-dark-200">
+                      Actions
+                    </p>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-400">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
                 <tr class="bg-cc-dark-300">
-                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4"><div class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"></div><p class="text-[#E5E7EB]">Starter</p></td>
-                  <td class="hidden lg:table-cell align-middle lg:pl-4"><div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div></td>
-                  <td class="pr-4"><input type="text" id="hostNameInput" class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]" placeholder="Enter your name"></input></td>
-                  <td class="hidden lg:table-cell align-middle"><button type="button" id="hostButtonInput" class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg">Sign up</button></td>            
+                  <td class="flex flex-row lg:gap-8 xl:gap-16 py-4 pl-4">
+                    <div
+                      class="hidden lg:block h-8 w-8 bg-cc-gold-100 rounded-md"
+                    ></div>
+                    <p class="text-[#E5E7EB]">Starter</p>
+                  </td>
+                  <td class="hidden lg:table-cell align-middle lg:pl-4">
+                    <div class="h-8 w-8 bg-cc-gold-100 rounded-md"></div>
+                  </td>
+                  <td class="pr-4">
+                    <input
+                      type="text"
+                      id="hostNameInput"
+                      class="border-solid border-1 border-cc-gold-100 bg-cc-gold-200 rounded-lg py-2 px-2 text-lg font-normal text-cc-dark-200 placeholder-cc-dark-400 w-full lg:w-[70%]"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                  <td class="hidden lg:table-cell align-middle">
+                    <button
+                      type="button"
+                      id="hostButtonInput"
+                      class="bg-cc-gold-100 hover:bg-cc-gold-200 text-center py-2 px-2 rounded-lg text-sm font-semibold text-cc-dark-200 shadow-lg"
+                    >
+                      Sign up
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
+      </div>
     </div>
-  </div>
-    <footer
-      class="w-full bg-cc-brown-100 rounded-t-xl py-4 shadow-lg mt-4"
-    >
+    <footer class="w-full bg-cc-brown-100 rounded-t-xl py-4 shadow-lg mt-4">
       <a href="#" class="text-cc-brown-300 hover:text-cc-gold-100"
         ><p class="text-base font-normal text-center w-full">
           Emergency App Reset
